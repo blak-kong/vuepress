@@ -42,5 +42,5 @@ jobs:
       run: |
         git pull $ECS_VuePress master
         git add .
-        git commit -F ../commit-message.log
+        git commit -F ./commit-message.log
         git push --force --quiet $ECS_VuePress master
