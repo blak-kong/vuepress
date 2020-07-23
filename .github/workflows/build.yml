@@ -32,8 +32,15 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan 47.103.12.22 >> ~/.ssh/known_hosts
     
+    - name: Get Latest Commit Message 
+      run: |
+        git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
+    
     - name: Backup To ESC Private Project
       env:
         ECS_VuePress: ${{ secrets.ECS_VuePress }}
       run: |
-        git push $ECS_VuePress master
+        git pull $ECS_VuePress master
+        git add .
+        git commit -F ../commit-message.log
+        git push --force --quiet $ECS_VuePress master
