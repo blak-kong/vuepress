@@ -36,4 +36,4 @@ jobs:
       env:
         ECS_VuePress: ${{ secrets.ECS_VuePress }}
       run: |
-        git push ${ECS_VuePress} master
+        git push $ECS_VuePress master
