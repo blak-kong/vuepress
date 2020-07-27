@@ -3,8 +3,7 @@
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress dev docs --temp .temp",
     "docs:dev": "vuepress dev docs --temp .temp",
-    "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "docs:build": "vuepress build docs"
   },
   "devDependencies": {
     "vuepress-plugin-auto-sidebar": "^1.5.0"

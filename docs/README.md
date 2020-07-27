@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: 快速上手 →
-actionLink: /frontend/javascript/01-初级
+actionLink: /JavaScript/JavaScript运行机制/01-javascript引擎.md
 features:
 - title: 第一性原理
   details: 看透事物的本质，要把事物分解成最基本的组成，从源头解决问题。
