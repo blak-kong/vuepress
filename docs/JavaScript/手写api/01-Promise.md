@@ -14,17 +14,17 @@ Promise 主要解决了异步编程带来的回调地狱问题，以同步的方
 
 ## Promise 如何使用？
 
-1）创造一个Promise实例
+1）创造一个 Promise 实例
 
-2）Promise实例生成以后，可以用then方法分别指定resolved状态和rejected状态的回调函数
+2）Promise 实例生成以后，可以用 then 方法分别指定 resolved 状态和 rejected 状态的回调函数
 
-3）可用Promise的try/catch方法预防异常
+3）可用 Promise 的 try/catch 方法预防异常
 
 ## 手写实现 Promise/A+，需要注意什么？（知识点）
 
 **1. Promise 是一个类，在执行这个类的时候需要传递一个执行器进去，这个执行器会立即执行**
 
->传什么执行器？执行了什么？为什么需要？
+> 传什么执行器？执行了什么？为什么需要？
 
 用过 Promise 的都知道，我们一般这样创建实例 `new Promise((resolve,reject)=>{})`，执行器会在创建时自动执行 `resolve` 和 `reject` 方法；
 
@@ -34,9 +34,8 @@ Promise 主要解决了异步编程带来的回调地狱问题，以同步的方
 
 如果没有执行器，不传入形参，就无法进行异步回调。
 
-
-
 **2. Promise 中有三种状态，分别为 成功/满足(fulfilled)、失败/拒绝(rejected)、等待(pending)**
+
 ```
 实例创建时总是 pending状态
 
@@ -60,12 +59,12 @@ promise.then(res => console.log(res))
         .catch(err=>console.log(err))
 ```
 
-
 **3. 实例方法 then()**
 
 then() 方法是被定义在原型对象中的。（ES6 中写法为 class 的非静态方法，ES5 中写法为挂载到原型 prototype 上。）
 
 then() 提供两个状态函数 `resolve()` 和 `reject()`，它们能改变 prmoise 实例状态，并返回值
+
 ```
 resolve: fulfilled // 成功
 reject: rejected // 失败
@@ -78,12 +77,12 @@ then (successCallback, failCallback) {/* ... */}
 then() 方法是被定义在原型对象中的。
 
 catch() 用于抛出错误。
+
 ```
 catch (failCallback) {
     return this.then(undefined, failCallback)
 }
 ```
-
 
 **5. then() 实现细节之回调**
 
@@ -95,7 +94,7 @@ catch (failCallback) {
 
 **6. then() 实现细节之闭包**
 
-一个 promise 实例，可能会被多次调用。 
+一个 promise 实例，可能会被多次调用。
 
 所以对于成功/失败的回调函数，我们需要在实例中，分别开辟一个堆内存来存储。
 
@@ -119,21 +118,23 @@ then 方法的链式调用 --> 返回 Promise 对象
 报出错误 Chaining cycle detected for promise #
 
 **10. 捕获错误**
+
 ```
 执行器当中的代码执行过程中发生错误时，状态变为错误状态
 then 方法中的回调函数在执行过程中发生错误时，要在下一个 then 方法中报出错误
 ```
 
 **11.将 then 使用方法**
+
 ```
 promise
 .then() // 返回 Promise 对象
 .then(value => console.log(value)) // 函数接受回调
 ```
+
 **12.Promise.all**
 
 静态方法，参数为一个数组
-
 
 **13.Promise.resolve**
 
@@ -141,25 +142,25 @@ promise
 
 **14.finally（返回最终结果）**
 
-原型方法/实例方法，finally定义在原型对象上。
+原型方法/实例方法，finally 定义在原型对象上。
 
 无论当前 promise 对象最终是成功还是失败，都会被调用，并且总是能得到最终的值
 
-
 finally 方法的回调函数中可以 return 一个 promise 对象，此时应该等待这个 promise 对象执行完成之后，再执行下一个 then()
 
-**从第12条开始，都不是 Promise/A+ 必须，只是原生Promise的扩展方法，还有其他方法不列举，有兴趣可以看手写ES5抄过来的，Promise的源码实现的原文地址。**
-
+**从第 12 条开始，都不是 Promise/A+ 必须，只是原生 Promise 的扩展方法，还有其他方法不列举，有兴趣可以看手写 ES5 抄过来的，Promise 的源码实现的原文地址。**
 
 ## 手写 Promise(ES6 / Promise/A+ 规范)
 
 已通过 Promise/A+ 规范测试。
 
 测试插件
->npm install promises-aplus-tests -D
+
+> npm install promises-aplus-tests -D
 
 运行测试
->npx promises-aplus-tests promise.js
+
+> npx promises-aplus-tests promise.js
 
 ```javascript
 const PENDING = 'pending' // 等待
@@ -174,13 +175,13 @@ class MyPromise {
     } catch (e) {
       this.reject(e)
     }
-    
+
   }
 
   // 直接定义在最顶层的常量和方法，是实例属性，相当于定义在 构造器constructor() 里面的 this 上。
   // 状态定义成常量，为了复用和有提示
   status = PENDING
-  
+
   value = undefined // 成功之后的值
   reason = undefined // 失败的原因
 
@@ -242,7 +243,7 @@ class MyPromise {
             // 如果是普通值，直接调用 resolve
             // 如果是 promise 对象，查看 promise 对象返回的结果
             // 再根据 promise 对象返回的结果，决定调用 resolve 还是 reject
-            
+
             // 使用异步代码，获取到 promise2
             resolvePromise(promise2, x, resolve, reject)
           } catch (e) {
@@ -261,7 +262,7 @@ class MyPromise {
               // 如果是普通值，直接调用 resolve
               // 如果是 promise 对象，查看 promise 对象返回的结果
               // 再根据 promise 对象返回的结果，决定调用 resolve 还是 reject
-  
+
               // 使用异步代码，获取到 promise2
               resolvePromise(promise2, x, resolve, reject)
             } catch (e) {
@@ -278,7 +279,7 @@ class MyPromise {
               // 如果是普通值，直接调用 resolve
               // 如果是 promise 对象，查看 promise 对象返回的结果
               // 再根据 promise 对象返回的结果，决定调用 resolve 还是 reject
-  
+
               // 使用异步代码，获取到 promise2
               resolvePromise(promise2, x, resolve, reject)
             } catch (e) {
@@ -288,7 +289,7 @@ class MyPromise {
         })
       }
     })
-    
+
     return promise2
   }
 
@@ -396,7 +397,7 @@ module.exports = MyPromise
 
 ## 手写 Promise(ES5 / Promise/A+ 规范)
 
-代码来源：[Promise的源码实现（完美符合Promise/A+规范） - 前端进阶 - SegmentFault 思否](https://segmentfault.com/a/1190000018428848?utm_source=tag-newest)
+代码来源：[Promise 的源码实现（完美符合 Promise/A+规范） - 前端进阶 - SegmentFault 思否](https://segmentfault.com/a/1190000018428848?utm_source=tag-newest)
 
 ```javascript
 /**
@@ -404,7 +405,7 @@ module.exports = MyPromise
  * 2. executor 接受两个参数，分别是 resolve 和 reject
  * 3. promise 只能从 pending 到 rejected, 或者从 pending 到 fulfilled
  * 4. promise 的状态一旦确认，就不会再改变
- * 5. promise 都有 then 方法，then 接收两个参数，分别是 promise 成功的回调 onFulfilled, 
+ * 5. promise 都有 then 方法，then 接收两个参数，分别是 promise 成功的回调 onFulfilled,
  *      和 promise 失败的回调 onRejected
  * 6. 如果调用 then 时，promise已经成功，则执行 onFulfilled，并将promise的值作为参数传递进去。
  *      如果promise已经失败，那么执行 onRejected, 并将 promise 失败的原因作为参数传递进去。
@@ -417,147 +418,156 @@ module.exports = MyPromise
  *   就走下一个then的成功，如果失败，就走下一个then的失败
  */
 
-const PENDING = 'pending';
-const FULFILLED = 'fulfilled';
-const REJECTED = 'rejected';
+const PENDING = "pending";
+const FULFILLED = "fulfilled";
+const REJECTED = "rejected";
 function MyPromise(executor) {
-    let self = this;
-    self.status = PENDING;
-    self.onFulfilled = [];//成功的回调
-    self.onRejected = []; //失败的回调
-    //PromiseA+ 2.1
-    function resolve(value) {
-        if (self.status === PENDING) {
-            self.status = FULFILLED;
-            self.value = value;
-            self.onFulfilled.forEach(fn => fn());//PromiseA+ 2.2.6.1
-        }
+  let self = this;
+  self.status = PENDING;
+  self.onFulfilled = []; //成功的回调
+  self.onRejected = []; //失败的回调
+  //PromiseA+ 2.1
+  function resolve(value) {
+    if (self.status === PENDING) {
+      self.status = FULFILLED;
+      self.value = value;
+      self.onFulfilled.forEach((fn) => fn()); //PromiseA+ 2.2.6.1
     }
+  }
 
-    function reject(reason) {
-        if (self.status === PENDING) {
-            self.status = REJECTED;
-            self.reason = reason;
-            self.onRejected.forEach(fn => fn());//PromiseA+ 2.2.6.2
-        }
+  function reject(reason) {
+    if (self.status === PENDING) {
+      self.status = REJECTED;
+      self.reason = reason;
+      self.onRejected.forEach((fn) => fn()); //PromiseA+ 2.2.6.2
     }
+  }
 
-    try {
-        executor(resolve, reject);
-    } catch (e) {
-        reject(e);
-    }
+  try {
+    executor(resolve, reject);
+  } catch (e) {
+    reject(e);
+  }
 }
 
 MyPromise.prototype.then = function (onFulfilled, onRejected) {
-    //PromiseA+ 2.2.1 / PromiseA+ 2.2.5 / PromiseA+ 2.2.7.3 / PromiseA+ 2.2.7.4
-    // 如果是函数，返回函数本身，否则返回值
-    onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
-    // 如果是函数，返回函数本身，否则返回报错
-    onRejected = typeof onRejected === 'function' ? onRejected : reason => { throw reason };
-    let self = this;
-    //PromiseA+ 2.2.7
-    let promise2 = new MyPromise((resolve, reject) => {
-        if (self.status === FULFILLED) {
-            //PromiseA+ 2.2.2
-            //PromiseA+ 2.2.4 --- setTimeout
-            setTimeout(() => {
-                try {
-                    //PromiseA+ 2.2.7.1
-                    let x = onFulfilled(self.value);
-                    resolvePromise(promise2, x, resolve, reject);
-                } catch (e) {
-                    //PromiseA+ 2.2.7.2
-                    reject(e);
-                }
-            });
-        } else if (self.status === REJECTED) {
-            //PromiseA+ 2.2.3
-            setTimeout(() => {
-                try {
-                    let x = onRejected(self.reason);
-                    resolvePromise(promise2, x, resolve, reject);
-                } catch (e) {
-                    reject(e);
-                }
-            });
-        } else if (self.status === PENDING) {
-            self.onFulfilled.push(() => {
-                setTimeout(() => {
-                    try {
-                        let x = onFulfilled(self.value);
-                        resolvePromise(promise2, x, resolve, reject);
-                    } catch (e) {
-                        reject(e);
-                    }
-                });
-            });
-            self.onRejected.push(() => {
-                setTimeout(() => {
-                    try {
-                        let x = onRejected(self.reason);
-                        resolvePromise(promise2, x, resolve, reject);
-                    } catch (e) {
-                        reject(e);
-                    }
-                });
-            });
+  //PromiseA+ 2.2.1 / PromiseA+ 2.2.5 / PromiseA+ 2.2.7.3 / PromiseA+ 2.2.7.4
+  // 如果是函数，返回函数本身，否则返回值
+  onFulfilled =
+    typeof onFulfilled === "function" ? onFulfilled : (value) => value;
+  // 如果是函数，返回函数本身，否则返回报错
+  onRejected =
+    typeof onRejected === "function"
+      ? onRejected
+      : (reason) => {
+          throw reason;
+        };
+  let self = this;
+  //PromiseA+ 2.2.7
+  let promise2 = new MyPromise((resolve, reject) => {
+    if (self.status === FULFILLED) {
+      //PromiseA+ 2.2.2
+      //PromiseA+ 2.2.4 --- setTimeout
+      setTimeout(() => {
+        try {
+          //PromiseA+ 2.2.7.1
+          let x = onFulfilled(self.value);
+          resolvePromise(promise2, x, resolve, reject);
+        } catch (e) {
+          //PromiseA+ 2.2.7.2
+          reject(e);
         }
-    });
-    return promise2;
-}
+      });
+    } else if (self.status === REJECTED) {
+      //PromiseA+ 2.2.3
+      setTimeout(() => {
+        try {
+          let x = onRejected(self.reason);
+          resolvePromise(promise2, x, resolve, reject);
+        } catch (e) {
+          reject(e);
+        }
+      });
+    } else if (self.status === PENDING) {
+      self.onFulfilled.push(() => {
+        setTimeout(() => {
+          try {
+            let x = onFulfilled(self.value);
+            resolvePromise(promise2, x, resolve, reject);
+          } catch (e) {
+            reject(e);
+          }
+        });
+      });
+      self.onRejected.push(() => {
+        setTimeout(() => {
+          try {
+            let x = onRejected(self.reason);
+            resolvePromise(promise2, x, resolve, reject);
+          } catch (e) {
+            reject(e);
+          }
+        });
+      });
+    }
+  });
+  return promise2;
+};
 
 function resolvePromise(promise2, x, resolve, reject) {
-    let self = this;
-    //PromiseA+ 2.3.1
-    if (promise2 === x) {
-        reject(new TypeError('Chaining cycle'));
-    }
-    if (x && typeof x === 'object' || typeof x === 'function') {
-        let used; //PromiseA+2.3.3.3.3 只能调用一次
-        try {
-            let then = x.then;
-            if (typeof then === 'function') {
-                //PromiseA+2.3.3
-                then.call(x, (y) => {
-                    //PromiseA+2.3.3.1
-                    if (used) return;
-                    used = true;
-                    resolvePromise(promise2, y, resolve, reject);
-                }, (r) => {
-                    //PromiseA+2.3.3.2
-                    if (used) return;
-                    used = true;
-                    reject(r);
-                });
-
-            }else{
-                //PromiseA+2.3.3.4
-                if (used) return;
-                used = true;
-                resolve(x);
-            }
-        } catch (e) {
-            //PromiseA+ 2.3.3.2
+  let self = this;
+  //PromiseA+ 2.3.1
+  if (promise2 === x) {
+    reject(new TypeError("Chaining cycle"));
+  }
+  if ((x && typeof x === "object") || typeof x === "function") {
+    let used; //PromiseA+2.3.3.3.3 只能调用一次
+    try {
+      let then = x.then;
+      if (typeof then === "function") {
+        //PromiseA+2.3.3
+        then.call(
+          x,
+          (y) => {
+            //PromiseA+2.3.3.1
             if (used) return;
             used = true;
-            reject(e);
-        }
-    } else {
-        //PromiseA+ 2.3.3.4
+            resolvePromise(promise2, y, resolve, reject);
+          },
+          (r) => {
+            //PromiseA+2.3.3.2
+            if (used) return;
+            used = true;
+            reject(r);
+          }
+        );
+      } else {
+        //PromiseA+2.3.3.4
+        if (used) return;
+        used = true;
         resolve(x);
+      }
+    } catch (e) {
+      //PromiseA+ 2.3.3.2
+      if (used) return;
+      used = true;
+      reject(e);
     }
+  } else {
+    //PromiseA+ 2.3.3.4
+    resolve(x);
+  }
 }
 
 // 测试 promise 需要 defer api
 MyPromise.deferred = function () {
-    let dfd = {};
-    dfd.promise = new MyPromise((resolve, reject) => {
-        dfd.resolve = resolve;
-        dfd.reject = reject;
-    });
-    return dfd;
-}
+  let dfd = {};
+  dfd.promise = new MyPromise((resolve, reject) => {
+    dfd.resolve = resolve;
+    dfd.reject = reject;
+  });
+  return dfd;
+};
 
 module.exports = MyPromise;
 ```
