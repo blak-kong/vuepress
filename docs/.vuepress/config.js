@@ -15,8 +15,12 @@ module.exports = {
             link: "/JavaScript/JavaScript运行机制/01-javascript引擎.md",
           },
           {
+            text: "函数",
+            link: "/JavaScript/函数/01-JavaScript中的三种函数.md",
+          },
+          {
             text: "函数式编程",
-            link: "/JavaScript/函数式编程/01-为什么要学函数式.md",
+            link: "/JavaScript/函数式编程/01-什么是函数式编程.md",
           },
           { text: "手写api", link: "/javascript/手写api/01-Promise.md" },
           { text: "ES6+", link: "/javascript/ES6+/01-let 和 const.md" },
@@ -35,21 +39,6 @@ module.exports = {
     // 添加侧边栏
     // sidebar: ['/', '/javascript', '/算法','设计模式','构建工具'],
     // sidebarDepth: 2,
-    sidebar: {
-      "/JavaScript/JavaScript运行机制/": [
-        "执行上下文",
-        "js栈和变量对象",
-        "js内存空间",
-        "js内存机制",
-        "js内存泄露",
-        "事件循环",
-      ],
-      // '/frontend/': [
-      //   '/frontend/javascript/',
-      //   '/frontend/html/',
-      //   '/frontend/css/'
-      // ],
-    },
   },
   plugins: {
     "vuepress-plugin-auto-sidebar": {}, // 自动生成

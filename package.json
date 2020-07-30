@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
-    "build": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs",
     "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs"
   },

@@ -1,0 +1,76 @@
+---
+title: 闭包
+---
+
+## 定义函数的方式
+
+### 构造函数（ES6 中用于语法糖实现了 class 类）
+
+构造函数会创造一个对象原型，实际使用需要用 new 实例化一个新对象，并将该新对象作为返回值返回。
+
+```javascript
+// ES3 ES5
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+Point.prototype.toString = function () {
+  return "(" + this.x + ", " + this.y + ")";
+};
+
+var p = new Point(1, 2);
+
+// 对应ES6的静态方法，在老版本构造函数中没什么用
+Point.add = function () {};
+```
+
+```javascript
+// ES6+
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  toString() {
+    return "(" + this.x + ", " + this.y + ")";
+  }
+
+  // 静态方法：只能使用类调用，实例化后不可调用.
+  static add() {
+    return this.x + this.y;
+  }
+}
+```
+
+### 普通函数
+
+```
+function abc() {
+    console.log('我是构造函数')
+}
+```
+
+### 匿名函数
+
+```
+var abc = function () {
+    console.log('我是匿名函数，一般会赋值给变量，或立即执行。')
+}
+```
+
+### 立即执行函数
+
+```
+// 注意，严格模式下，函数调用的括号要写在外面。
+// 用括号包裹 function 是为了让解释器可以将 function 识别为函数表达式。
+;(function () {
+    console.log('我是匿名函数，一般会赋值给变量，或立即执行。')
+})();
+```
+
+## 调用函数
+
+## 参考
+
+函数定义和调用 - 廖雪峰的官方网站 https://www.liaoxuefeng.com/wiki/1022910821149312/1023021087191360

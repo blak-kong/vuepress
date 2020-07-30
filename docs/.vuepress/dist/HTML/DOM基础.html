@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DOM基础 | 前端技术文档</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="手写源码系列！深入系列！">
+    <link rel="preload" href="/assets/css/0.styles.65949c32.css" as="style"><link rel="preload" href="/assets/js/app.2c275fa9.js" as="script"><link rel="preload" href="/assets/js/2.02e5b305.js" as="script"><link rel="preload" href="/assets/js/11.723820f4.js" as="script"><link rel="prefetch" href="/assets/js/10.5f6d1531.js"><link rel="prefetch" href="/assets/js/12.25ca14c5.js"><link rel="prefetch" href="/assets/js/13.9e289f38.js"><link rel="prefetch" href="/assets/js/14.4c8df560.js"><link rel="prefetch" href="/assets/js/15.fe7e9c43.js"><link rel="prefetch" href="/assets/js/16.f1399d2f.js"><link rel="prefetch" href="/assets/js/17.c13ade3c.js"><link rel="prefetch" href="/assets/js/18.afbf4399.js"><link rel="prefetch" href="/assets/js/19.be55252a.js"><link rel="prefetch" href="/assets/js/20.51047aa3.js"><link rel="prefetch" href="/assets/js/21.96e9ac0d.js"><link rel="prefetch" href="/assets/js/22.d9c21f70.js"><link rel="prefetch" href="/assets/js/23.4dd7a644.js"><link rel="prefetch" href="/assets/js/24.6a1ff945.js"><link rel="prefetch" href="/assets/js/25.1eb39695.js"><link rel="prefetch" href="/assets/js/26.98e403e3.js"><link rel="prefetch" href="/assets/js/27.9cad1539.js"><link rel="prefetch" href="/assets/js/28.3aa82625.js"><link rel="prefetch" href="/assets/js/29.251bb38e.js"><link rel="prefetch" href="/assets/js/3.2bb8a527.js"><link rel="prefetch" href="/assets/js/30.267b8aa1.js"><link rel="prefetch" href="/assets/js/31.dcf64e57.js"><link rel="prefetch" href="/assets/js/32.b1779261.js"><link rel="prefetch" href="/assets/js/33.aa283bf9.js"><link rel="prefetch" href="/assets/js/34.c5b5d21a.js"><link rel="prefetch" href="/assets/js/35.f3731ac4.js"><link rel="prefetch" href="/assets/js/36.8fe39644.js"><link rel="prefetch" href="/assets/js/37.57596a4b.js"><link rel="prefetch" href="/assets/js/38.bfbe59a0.js"><link rel="prefetch" href="/assets/js/39.1a322c48.js"><link rel="prefetch" href="/assets/js/4.636b0ad8.js"><link rel="prefetch" href="/assets/js/40.b4073e00.js"><link rel="prefetch" href="/assets/js/41.7d2e6772.js"><link rel="prefetch" href="/assets/js/42.68921a1b.js"><link rel="prefetch" href="/assets/js/43.cdda8eac.js"><link rel="prefetch" href="/assets/js/44.905bf74c.js"><link rel="prefetch" href="/assets/js/45.d0254f87.js"><link rel="prefetch" href="/assets/js/46.10d8a83e.js"><link rel="prefetch" href="/assets/js/47.05ce2bb0.js"><link rel="prefetch" href="/assets/js/48.7aae21a7.js"><link rel="prefetch" href="/assets/js/49.ce84a989.js"><link rel="prefetch" href="/assets/js/5.a7c985c9.js"><link rel="prefetch" href="/assets/js/50.1af6d4a5.js"><link rel="prefetch" href="/assets/js/51.99b7df16.js"><link rel="prefetch" href="/assets/js/6.d38aeac2.js"><link rel="prefetch" href="/assets/js/7.dadda87f.js"><link rel="prefetch" href="/assets/js/8.84abf3a9.js"><link rel="prefetch" href="/assets/js/9.7eb675cd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.65949c32.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="javascript" class="dropdown-title"><span class="title">javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaScript/JavaScript运行机制/01-javascript引擎.html" class="nav-link">
+  JavaScript运行机制
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数/01-JavaScript中的三种函数.html" class="nav-link">
+  函数
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数式编程/01-什么是函数式编程.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/手写api/01-Promise.html" class="nav-link">
+  手写api
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/ES6+/01-let 和 const.html" class="nav-link">
+  ES6+
+</a></li><li class="dropdown-item"><!----> <a href="/构建工具/01-Gulp.html" class="nav-link">
+  构建工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/webpack.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/gulp.html" class="nav-link">
+  gulp
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.lzwlook.fun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="javascript" class="dropdown-title"><span class="title">javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaScript/JavaScript运行机制/01-javascript引擎.html" class="nav-link">
+  JavaScript运行机制
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数/01-JavaScript中的三种函数.html" class="nav-link">
+  函数
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数式编程/01-什么是函数式编程.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/手写api/01-Promise.html" class="nav-link">
+  手写api
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/ES6+/01-let 和 const.html" class="nav-link">
+  ES6+
+</a></li><li class="dropdown-item"><!----> <a href="/构建工具/01-Gulp.html" class="nav-link">
+  构建工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/webpack.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/gulp.html" class="nav-link">
+  gulp
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.lzwlook.fun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>HTML</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/HTML/DOM基础.html" class="active sidebar-link">DOM基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/HTML/DOM基础.html#第一章-dom概述" class="sidebar-link">第一章:DOM概述</a></li><li class="sidebar-sub-header"><a href="/HTML/DOM基础.html#第二章-document对象" class="sidebar-link">第二章:document对象</a></li></ul></li><li><a href="/HTML/HTML的基本结构.html" class="sidebar-link">HTML的基本结构</a></li><li><a href="/HTML/基本的表单标签.html" class="sidebar-link">基本的表单标签</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dom基础"><a href="#dom基础" class="header-anchor">#</a> DOM基础</h1> <h2 id="第一章-dom概述"><a href="#第一章-dom概述" class="header-anchor">#</a> 第一章:DOM概述</h2> <h3 id="_1-1dom以及节点概念"><a href="#_1-1dom以及节点概念" class="header-anchor">#</a> 1.1DOM以及节点概念</h3> <p>​</p> <p>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。</p> <div class="language- extra-class"><pre><code>DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。
+
+![img1](https://github.com/LinDaiDai/JavaScript/blob/master/DomImg/img1.png?raw=trueE:\JavaScript\DomImg\img1.png)
+
+**HTML**文档可以说由节点构成的集合，DOM节点有:
+</code></pre></div><ol><li><p>元素节点：<strong>上图中<html>、<body>、<p>等都是元素节点，即标签。</p></body></html></strong></p></li> <li><p>文本节点:<strong>向用户展示的内容，如<li>...</li>中的JavaScript、DOM、CSS等文本,即标签内部的纯文本.</strong></p></li> <li><p>属性节点:元素属性，如<a>标签的链接属性href=&quot;http://www.imooc.com&quot;,即标签的属性.</a></p></li></ol> <p>document节点是每个文档的根节点</p> <p>document节点下面只有一个 html节点，我们称之为<strong>文档元素</strong>。</p> <p>(documentElement)文档元素是文档的最外层元素，其他元素都包含在文档元素中。</p> <p>一个文档只能有一个文档元素，在html中文档元素永远是 <code>&lt;html&gt;</code>元素。</p> <p>在DOM树中，html文档中每一处标记都可以用树中的一个节点来表示。</p> <p>html(元素)标签，通过元素节点表示属性，通过属性节点来表示文档类型，通过文档类型节点来表示注释，通过注释类型来表示</p> <h3 id="_1-2节点的属性-特性"><a href="#_1-2节点的属性-特性" class="header-anchor">#</a> 1.2节点的属性(特性)</h3> <p>每一个节点都有三个特点:</p> <div class="language- extra-class"><pre><code>1.nodeName      节点名称(只读)    
+
+2.nodeValue     节点值(设置或返回节点的值)     
+
+3.nodeType      节点类型
+</code></pre></div><p>1.<strong>nodeName</strong>：节点名称(nodeName 始终包含 HTML 元素的大写字母标签名) nodeName 是只读的</p> <p>2.元素节点的 nodeName 与标签名相同</p> <p>3.属性节点的 nodeName 与属性名相同（元素.getAttributeNode(“属性名”)获取属性节点）4.文本节点的 nodeName 始终是 #text（通过元素的子节点获取）</p> <p>5.注释节点的nodeName是#comment（通过元素的子节点获取）</p> <p>6.文档节点的 nodeName 始终是 #document</p> <p>7.<strong>nodeValue</strong>：节点值 （设置或返回节点的值）</p> <p>8.元素节点的 nodeValue 是 undefined 或 null</p> <p>9.属性节点的 nodeValue 是属性值</p> <p>10.文本节点的 nodeValue 是文本本身</p> <p>11.注释节点的nodeValue是注释里面的内容</p> <p>12.文档节点的nodeValue 是null</p> <p>13.<strong>nodeType</strong>：节点类型</p> <p>14.元素 element 1</p> <p>15.属性 attr 2</p> <p>16.文本 text 3</p> <p>17.注释 comments 8</p> <p>18.文档 document 9</p> <p><em>例:</em></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;body&gt;
+&lt;p id = &quot;p&quot; class = &quot;abc&quot;&gt;您好&lt;/p&gt;
+&lt;script&gt;
+    var p = document.getElementById('p');
+    p.nodeName      P
+    p.nodeValue     null
+    p.nodeType     1     元素节点
+    var text = p.firstChild;
+    text.nodeName     #text
+    text.nodeValue     您好
+    text.nodeType     3     文本节点
+    var attrNode = p.getAttributeNode(&quot;id&quot;);
+    attrNode.nodeName     id
+    attrNode.nodeValue     p
+    attrNode.nodeType     2     属性节点
+ &lt;/script&gt;
+ &lt;/body&gt;
+</code></pre></div><h2 id="第二章-document对象"><a href="#第二章-document对象" class="header-anchor">#</a> 第二章:document对象</h2> <h3 id="_2-1获取节点"><a href="#_2-1获取节点" class="header-anchor">#</a> 2.1获取节点</h3> <h4 id="_1-getelementbyid-id名"><a href="#_1-getelementbyid-id名" class="header-anchor">#</a> 1.getElementById('id名')</h4> <div class="language- extra-class"><pre><code>根据元素的id名来获取节点
+
+**IE5以下不兼容**
+</code></pre></div><h4 id="_2-getelementsbytagname-标签名"><a href="#_2-getelementsbytagname-标签名" class="header-anchor">#</a> 2.getElementsByTagName('标签名')</h4> <div class="language- extra-class"><pre><code>根据元素的标签名来获取节点.一个文档中可能会存在很多相同的标签名,因此用此方法获取到的是多个element组成的集合
+</code></pre></div><h4 id="_3-getelementsbyname-name"><a href="#_3-getelementsbyname-name" class="header-anchor">#</a> 3.getElementsByName('name')</h4> <div class="language- extra-class"><pre><code>根据标签的name属性来获取节点,返回的也是多个element组成的集合;
+
+**注:**不是所有标签都有name属性,只有 **表达标签** 才有name属性(切某些低版浏览器不支持)
+</code></pre></div><h4 id="_4-queryselector-css选择器"><a href="#_4-queryselector-css选择器" class="header-anchor">#</a> 4.querySelector('css选择器')</h4> <div class="language- extra-class"><pre><code>参数:指定一个或多个匹配元素的css选择器.可以用id, 类, 类型,属性,属性值等来选取元素.
+</code></pre></div><p>对于多个选择器,使用逗号隔开,返回一个匹配的元素,</p> <p>返回值:匹配指定css选择器的第一个元素, 若没找到,返回null.</p> <p>document.querySelector   获取第一个</p> <p>var p = document.querySelector(&quot;#box &gt; p&quot;); //box 这个 id 下的 p标签</p> <p>console.log(p);</p> <p>=&gt;</p><p>abc</p><p></p> <h4 id="_5-queryselectorall-css选择器"><a href="#_5-queryselectorall-css选择器" class="header-anchor">#</a> 5.querySelectorAll('css选择器')</h4> <div class="language- extra-class"><pre><code>获取满足选择器里的所有标签
+</code></pre></div><h4 id="_6-documentelement-元素"><a href="#_6-documentelement-元素" class="header-anchor">#</a> 6.documentElement(元素)</h4> <blockquote><p>documentElement 属性以一个元素对象返回一个文档的文档元素。HTML 文档返回对象为 <strong>HTML元素</strong>。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>&lt;body&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        alert(document.documentElement.nodeName);    // html
+        alert(document.documentElement.nodeValue);    // null
+        alert(document.documentElement.nodeType);    // 1
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre></div><h3 id="_2-2-node关系-获取操作"><a href="#_2-2-node关系-获取操作" class="header-anchor">#</a> 2.2 Node关系 获取操作</h3> <h4 id="_1-节点与节点之间的关系"><a href="#_1-节点与节点之间的关系" class="header-anchor">#</a> 1.节点与节点之间的关系</h4> <p>父（parent）节点 父节点拥有任意数量的子节点</p> <p>子（child）节点 子节点拥有一个父节点</p> <p>兄弟（sibling）节点 同级的子节点被称为同胞（兄弟或姐妹）。</p> <p>同胞是拥有相同父节点的节点根 (root) 节点</p> <p>一个文档只能有一个根节点。</p> <p>对html文档来说，根节点就是documentElement。</p> <p>根节点不可能有父节点</p> <p><img src="https://github.com/LinDaiDai/JavaScript/blob/master/DomImg/img2.png?raw=true" alt="img2"></p> <h4 id="_2-获取操作"><a href="#_2-获取操作" class="header-anchor">#</a> 2.获取操作</h4> <div class="language- extra-class"><pre class="language-text"><code>var div = document.querySelector(&quot;div&quot;);
+var allNodes = div.childNodes;          //childNodes会把所有类型节点都获取到,包裹元素节点,文本节点(空格换行符等),属性节点;
+
+但主要是为了获取元素节点(nodeType为1)
+方法1:
+for( var c in allNode){
+if( c.nodeType ==1){
+document.write(c)
+}
+}
+方法2:
+var allNodes = div.children;          //div的所有子节点(只有元素节点,不包裹文本等其他节点)
+var count = div.childElementCount;     //div的所有子节点的个数 ,也可以之间用 allNodes.length;
+var firstChild = div.firstElementChild;     //div的第一个元素节点
+var lastChild = div.lastElementChild;          //div的最后一个元素节点
+var secondChild = div.firstElementChild.nextElementSibling;     //div的第二个元素节点
+var lastSecondChild = div.lastElementChild.previousElementSibling;     //div的倒数第二个元素节点
+div == div.firstElementChild.parentNode;                              //div的第一个元素节点的父节点就是div本身
+注:若把 children 换为childNodes 以及把后面全部的Element去掉,则会选取所有类型的节点
+</code></pre></div><h4 id="_3-创建修改操作"><a href="#_3-创建修改操作" class="header-anchor">#</a> 3.创建修改操作</h4> <h5 id="_3-1-createtextnode"><a href="#_3-1-createtextnode" class="header-anchor">#</a> 3.1 createTextNode( )</h5> <div class="language- extra-class"><pre><code>	创建文本节点
+
+`var text = document.createTextNode(&quot;这个是文本节点&quot;);`
+</code></pre></div><h5 id="_3-2-createelement"><a href="#_3-2-createelement" class="header-anchor">#</a> 3.2 createElement( )</h5> <div class="language- extra-class"><pre><code>	创建元素节点	
+
+	可以是 div  p   span  ul  li 等
+
+`var ele = document.createElement(&quot;div&quot;);`
+</code></pre></div><h5 id="_3-3-appendchild"><a href="#_3-3-appendchild" class="header-anchor">#</a> 3.3 appendChild( )</h5> <div class="language- extra-class"><pre><code>给一个元素追加child节点
+
+`document.body.appendChild(ele); //添加到body的最后一个子节点之后; `
+</code></pre></div><h5 id="_3-4-insertbefore"><a href="#_3-4-insertbefore" class="header-anchor">#</a> 3.4 insertBefore( )</h5> <div class="language- extra-class"><pre><code>fatherNode.insertBefore(newNode, existingNode);
+
+参数:	1.要插入的节点	2.目标节点
+
+在一个节点前插入一个节点
+</code></pre></div><p>将一个新创建的元素插入到某个元素之前</p> <div class="language- extra-class"><pre><code> 如:在ul中,有3个li ,要将新创建的一个li 插入到第一位,
+      ul.insertBefore(li,ul.firstElementChild);
+    将li 插入到最后一位:
+      1.ul.appendChild(li);
+      2.ul.insertBefore(li,null/undefined);			
+</code></pre></div><h5 id="_3-5-removechild"><a href="#_3-5-removechild" class="header-anchor">#</a> 3.5 removeChild( )</h5> <div class="language- extra-class"><pre><code>移除子节点
+
+fatherNode.removeChild(node)
+</code></pre></div><h5 id="_3-6-replacechild"><a href="#_3-6-replacechild" class="header-anchor">#</a> 3.6 replaceChild( )</h5> <div class="language- extra-class"><pre><code>fatherNode.replaceChild(newNode,existingNode)
+
+替换子节点
+</code></pre></div><h5 id="_3-7-clonenode"><a href="#_3-7-clonenode" class="header-anchor">#</a> 3.7 cloneNode( )</h5> <div class="language- extra-class"><pre><code>node.cloneNode(deep)
+
+克隆节点
+
+参数 deep 可以指定节点的精确克隆
+
+	1.若不写参数,只拷贝当前的这个元素节点,不包过它的子节点
+
+	2.参数为 **true** ,**它还将递归复制当前节点的所有子孙节点**.	
+</code></pre></div><h4 id="_4-元素属性操作"><a href="#_4-元素属性操作" class="header-anchor">#</a> 4.元素属性操作</h4> <div class="language- extra-class"><pre><code>##### 4.1 getAttribute( ):获取属性值
+
+
+
+&lt;ul id = &quot;abc&quot; class = &quot;one&quot;&gt;
+如 获取 ul 的 id 
+     console.log(ul.getAttribute(&quot;id&quot;));
+ =&gt; abc
+##### 4.2 setAttribute( ):
+</code></pre></div><p>添加或设置属性值</p> <div class="language- extra-class"><pre><code>      1.如将 ul 的 id 名更换  
+          div.setAttribute(&quot;id&quot; , &quot;box&quot;)
+          ul 的 id 变为 box 
+      2.将 ul 的class 再添加俩个类名
+           div.setAttribute(&quot;class&quot; , div.getAttribute(&quot;class&quot;) + &quot; two&quot;);
+##### 4.3 removeAttribute( )
+
+*element*.removeAttribute(*attributename*)
+
+参数：必需。规定要删除的属性的名称
+
+*例:* 一个可以转换形态的按钮
+
+&lt;body&gt;  
+&lt;input id=&quot;input1&quot; type=&quot;button&quot; value=&quot;点我可以转换我的状态&quot; onclick=&quot;myFunction();&quot;&gt;
+&lt;script&gt;
+    function myFunction() {            
+        var input1 = document.getElementById(&quot;input1&quot;);
+        var typeValue = input1.getAttribute(&quot;type&quot;);
+        if(typeValue){
+            input1.removeAttribute(&quot;type&quot;);    //如果type属性有值就把这个属性去掉
+        }else {
+            input1.setAttribute(&quot;type&quot;, &quot;button&quot;);    //如果type属性不存就添加属性。
+        }
+    };
+&lt;/script&gt;   
+&lt;/body&gt;
+</code></pre></div><h5 id="_4-4-hasattribute"><a href="#_4-4-hasattribute" class="header-anchor">#</a> 4.4 hasAttribute( )</h5> <div class="language- extra-class"><pre><code>element.hasAttribute(attributename)
+
+参数：必须。判断指定的属性名是否存在。
+</code></pre></div><h4 id="_5-元素节点的常用属性"><a href="#_5-元素节点的常用属性" class="header-anchor">#</a> 5.元素节点的常用属性</h4> <h5 id="_5-1-基本属性"><a href="#_5-1-基本属性" class="header-anchor">#</a> 5.1 基本属性</h5> <div class="language- extra-class"><pre><code>div.nodeName   所有节点都有
+
+div.tagName     只针对元素节点
+
+div.id           获取id
+
+div.id = &quot;abc&quot;    增加/替换 id
+
+div.className = &quot;one&quot;    增加/替换 class
+
+checked 属性     表单标签特有的
+</code></pre></div><h5 id="_5-2-innerhtml属性"><a href="#_5-2-innerhtml属性" class="header-anchor">#</a> 5.2 innerHTML属性</h5> <div class="language- extra-class"><pre><code>innerHTML 属性设置或返回标签的开始和结束标签之间的 HTML。
+
+值为为文本	
+
+若要改变innerHTML(**要改变的值一定要放在.innerHTML之后**); 
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>var num =5;  num=&quot;我是字符串&quot;;   num=true;
+var span = document.getElementById('span').innerHTML=num;     正确写法
+alert(typeof(span));     //num是什么属性或者赋值给它的是什么属性, span就是什么属性;
+var span = document.getElementById('span').innerHTML;
+span = num;                                                  错误写法
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>1.利用innerHTML 获取标签内的所有内容,返回一个字符串
+alert(box.innerHTML); //获取这个元素节点里的文本(包含HTML标签),类型为string
+正常浏览器显示:    &lt;span&gt;我是span&lt;/span&gt;
+IE                 &lt;SPAN&gt;我是span&lt;/SPAN&gt;
+
+2.利用innerHTML 设置一个字符串,会把字符串中的有效的标签解析出来.
+  如,给div标签中添加一个内容是 &quot;abc&quot; 的p 标签
+        var div = document.querySelector(div);
+        div.innerHTML = &quot;&lt;p&gt;abc&lt;/p&gt;&quot;;
+</code></pre></div><p>​</p> <h5 id="_5-3-innertext属性"><a href="#_5-3-innertext属性" class="header-anchor">#</a> 5.3 innerText属性</h5> <div class="language- extra-class"><pre><code>1.innerText值获取标签中的文本内容，子标签本身不会获取到。
+
+2.去修改的时候，即使带有标签也会把标签作为纯文本来对待，而不会解析为标签
+
+**注:和innerHTML不同,它并不会解析有效的标签,而是把它作为纯文本对待**
+</code></pre></div><h5 id="_5-4-outerhtml"><a href="#_5-4-outerhtml" class="header-anchor">#</a> 5.4 outerHTML</h5> <div class="language- extra-class"><pre><code>1.**读取值** 把包过标签自身和它里面的内容都获取到    
+
+2.**设置值** 把标签用字符串来替换掉,如果字符串中有有效的标签,会被解析.
+
+**注:和innerHTML不同,它可以读取包过标签自身**
+</code></pre></div><h5 id="_5-5-value"><a href="#_5-5-value" class="header-anchor">#</a> 5.5 value</h5> <div class="language- extra-class"><pre><code>	如果一个标签可以拥有value值，则可以可以通过element.value来获取。
+
+	一般表单数据才具有vlaue：input、textarea、select
+</code></pre></div><h5 id="_5-6-获取元素的属性-offset"><a href="#_5-6-获取元素的属性-offset" class="header-anchor">#</a> 5.6 获取元素的属性(offset)</h5> <div class="language- extra-class"><pre><code>**注:** 以下四个属性只能读取 不能对元素进行修改;
+
+1.offsetWidth  	获取元素的实际宽度	包含border 和 padding 在内
+
+2.offsetHeight 	获取元素的实际高度	包含border 和 padding 在内
+
+3.offsetLeft 		元素定位之后相对于参照物父容器的偏移
+
+4.offsetTop 		元素定位之后相对于参照物父容器的偏移
+</code></pre></div><p>​</p> <h4 id="_6-样式表的属性-css脚本化"><a href="#_6-样式表的属性-css脚本化" class="header-anchor">#</a> 6.样式表的属性--css脚本化</h4> <h5 id="_6-1-获取和修改行内样式表"><a href="#_6-1-获取和修改行内样式表" class="header-anchor">#</a> 6.1 获取和修改行内样式表</h5> <div class="language- extra-class"><pre><code>2种方式访问到行内样式:
+
+	1.element.style.css属性名    
+
+       2.element.style[&quot;css属性名&quot;]
+</code></pre></div><h5 id="_6-2-获取内部样式表和外部样式表"><a href="#_6-2-获取内部样式表和外部样式表" class="header-anchor">#</a> 6.2 获取内部样式表和外部样式表</h5> <div class="language- extra-class"><pre><code>1.对于IE: 对象.currentStyle[&quot;属性名&quot;]     
+
+    2.其他浏览器: window.getComputedStyle(对象,null)[&quot;属性名&quot;]
+</code></pre></div><h5 id="_6-3-字符串模板"><a href="#_6-3-字符串模板" class="header-anchor">#</a> 6.3 字符串模板</h5> <p><code>字符串${变量}</code></p> <div class="language- extra-class"><pre class="language-text"><code>element.style.backgroundColor = `rgba(  
+       ${randomInt(0,255)},
+       ${randomInt(0,255)},
+       ${randomInt(0,255)},
+       ${Math.random()*0.+0.4}`;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/HTML/HTML的基本结构.html">
+        HTML的基本结构
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2c275fa9.js" defer></script><script src="/assets/js/2.02e5b305.js" defer></script><script src="/assets/js/11.723820f4.js" defer></script>
+  </body>
+</html>
