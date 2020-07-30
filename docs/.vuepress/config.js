@@ -16,11 +16,11 @@ module.exports = {
           },
           {
             text: "函数",
-            link: "/JavaScript/函数/01-JavaScript中的三种函数.md",
+            link: "/JavaScript/函数/01-定义函数的方式.md",
           },
           {
             text: "函数式编程",
-            link: "/JavaScript/函数式编程/01-什么是函数式编程.md",
+            link: "/JavaScript/函数式编程/01-函数式入门.md",
           },
           { text: "手写api", link: "/javascript/手写api/01-Promise.md" },
           { text: "ES6+", link: "/javascript/ES6+/01-let 和 const.md" },
@@ -30,8 +30,8 @@ module.exports = {
       {
         text: "构建工具",
         items: [
-          { text: "webpack", link: "/javascript/webpack.md" },
-          { text: "gulp", link: "/javascript/gulp.md" },
+          { text: "webpack", link: "/404/404.md" },
+          { text: "gulp", link: "/404/404.md" },
         ],
       },
       { text: "博客", link: "https://www.lzwlook.fun" },

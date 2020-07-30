@@ -18,6 +18,18 @@ Vuepress 生成文档，记录个人前端技术体系！👍
 
 ## JavaScript
 
+### 函数
+
+javascript 基础
+
+- 定义函数的方式
+- 类和对象的关系
+- 闭包
+- 高阶函数
+- 箭头函数
+
+[传送门 JavaScript 函数](http://vuepress.lzwlook.fun/JavaScript/函数/01-定义函数的方式.html)
+
 ### JavaScript 运行机制
 
 运行机制系列，知识点全程围绕 执行上下文、执行栈、栈堆内存、以及闭包展开。
