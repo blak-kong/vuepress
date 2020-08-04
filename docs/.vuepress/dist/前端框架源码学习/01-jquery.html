@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>jquery源码学习索引 | 前端技术文档</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="手写源码系列！深入系列！">
+    <link rel="preload" href="/assets/css/0.styles.65949c32.css" as="style"><link rel="preload" href="/assets/js/app.8d01291e.js" as="script"><link rel="preload" href="/assets/js/2.02e5b305.js" as="script"><link rel="preload" href="/assets/js/58.82491500.js" as="script"><link rel="prefetch" href="/assets/js/10.c2701b60.js"><link rel="prefetch" href="/assets/js/11.45282825.js"><link rel="prefetch" href="/assets/js/12.48619748.js"><link rel="prefetch" href="/assets/js/13.647b1675.js"><link rel="prefetch" href="/assets/js/14.deaf81c2.js"><link rel="prefetch" href="/assets/js/15.c0e684d3.js"><link rel="prefetch" href="/assets/js/16.387573c7.js"><link rel="prefetch" href="/assets/js/17.90e5b6ad.js"><link rel="prefetch" href="/assets/js/18.6932487f.js"><link rel="prefetch" href="/assets/js/19.f76174a0.js"><link rel="prefetch" href="/assets/js/20.d03ff86f.js"><link rel="prefetch" href="/assets/js/21.7549212f.js"><link rel="prefetch" href="/assets/js/22.f3870238.js"><link rel="prefetch" href="/assets/js/23.5a141343.js"><link rel="prefetch" href="/assets/js/24.e49590ec.js"><link rel="prefetch" href="/assets/js/25.3e7ba26d.js"><link rel="prefetch" href="/assets/js/26.5bf4b9d6.js"><link rel="prefetch" href="/assets/js/27.6cd6c7e3.js"><link rel="prefetch" href="/assets/js/28.62da91dc.js"><link rel="prefetch" href="/assets/js/29.4b1c3963.js"><link rel="prefetch" href="/assets/js/3.5c736b09.js"><link rel="prefetch" href="/assets/js/30.1b1c33c3.js"><link rel="prefetch" href="/assets/js/31.e4faba92.js"><link rel="prefetch" href="/assets/js/32.4d842099.js"><link rel="prefetch" href="/assets/js/33.1a10af17.js"><link rel="prefetch" href="/assets/js/34.bfc48c2f.js"><link rel="prefetch" href="/assets/js/35.776ff6d1.js"><link rel="prefetch" href="/assets/js/36.c0f4db81.js"><link rel="prefetch" href="/assets/js/37.bcbce3c2.js"><link rel="prefetch" href="/assets/js/38.c79060bb.js"><link rel="prefetch" href="/assets/js/39.f7c47fb0.js"><link rel="prefetch" href="/assets/js/4.632174fc.js"><link rel="prefetch" href="/assets/js/40.7db4c51b.js"><link rel="prefetch" href="/assets/js/41.077b5080.js"><link rel="prefetch" href="/assets/js/42.b7d10e6a.js"><link rel="prefetch" href="/assets/js/43.109077f5.js"><link rel="prefetch" href="/assets/js/44.ad3f631b.js"><link rel="prefetch" href="/assets/js/45.00c6eabc.js"><link rel="prefetch" href="/assets/js/46.dd1e729b.js"><link rel="prefetch" href="/assets/js/47.0b1a254a.js"><link rel="prefetch" href="/assets/js/48.acbbdc7c.js"><link rel="prefetch" href="/assets/js/49.cd202a29.js"><link rel="prefetch" href="/assets/js/5.a7c985c9.js"><link rel="prefetch" href="/assets/js/50.fdfeb2d2.js"><link rel="prefetch" href="/assets/js/51.72ce5cd1.js"><link rel="prefetch" href="/assets/js/52.ea8b2e15.js"><link rel="prefetch" href="/assets/js/53.6263766c.js"><link rel="prefetch" href="/assets/js/54.8072ec88.js"><link rel="prefetch" href="/assets/js/55.3ece06bf.js"><link rel="prefetch" href="/assets/js/56.9fa5a10c.js"><link rel="prefetch" href="/assets/js/57.1352e147.js"><link rel="prefetch" href="/assets/js/59.df67ad65.js"><link rel="prefetch" href="/assets/js/6.6a1b9624.js"><link rel="prefetch" href="/assets/js/60.a1c339b3.js"><link rel="prefetch" href="/assets/js/61.e40205bb.js"><link rel="prefetch" href="/assets/js/62.8af3da9c.js"><link rel="prefetch" href="/assets/js/63.7c60ed5d.js"><link rel="prefetch" href="/assets/js/64.fc31825c.js"><link rel="prefetch" href="/assets/js/7.039f99b6.js"><link rel="prefetch" href="/assets/js/8.d3475948.js"><link rel="prefetch" href="/assets/js/9.2da00f8a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.65949c32.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/目录.html" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="javascript" class="dropdown-title"><span class="title">javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaScript/JavaScript运行机制/01-javascript引擎.html" class="nav-link">
+  JavaScript运行机制
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数/01-定义函数的方式.html" class="nav-link">
+  函数
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数式编程/01-函数式入门.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/手写api/01-Promise.html" class="nav-link">
+  手写api
+</a></li><li class="dropdown-item"><!----> <a href="/构建工具/01-Gulp.html" class="nav-link">
+  构建工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/404/404.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/404/404.html" class="nav-link">
+  gulp
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="推荐博客" class="dropdown-title"><span class="title">推荐博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  前端博客-冴羽
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://www.lzwlook.fun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  blak-kong
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/目录.html" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="javascript" class="dropdown-title"><span class="title">javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaScript/JavaScript运行机制/01-javascript引擎.html" class="nav-link">
+  JavaScript运行机制
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数/01-定义函数的方式.html" class="nav-link">
+  函数
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/函数式编程/01-函数式入门.html" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/javascript/手写api/01-Promise.html" class="nav-link">
+  手写api
+</a></li><li class="dropdown-item"><!----> <a href="/构建工具/01-Gulp.html" class="nav-link">
+  构建工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/404/404.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/404/404.html" class="nav-link">
+  gulp
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="推荐博客" class="dropdown-title"><span class="title">推荐博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng/Blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  前端博客-冴羽
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://www.lzwlook.fun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  blak-kong
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>前端框架源码学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/前端框架源码学习/01-jquery.html" class="active sidebar-link">jquery源码学习索引</a></li><li><a href="/前端框架源码学习/02-vue.html" class="sidebar-link">vue 源码学习</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p><a href="https://github.com/ziyi2/jQuery" target="_blank" rel="noopener noreferrer">ziyi2/jQuery: jQuery2.0.3 源码分析笔记<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/前端框架源码学习/02-vue.html">
+        vue 源码学习
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8d01291e.js" defer></script><script src="/assets/js/2.02e5b305.js" defer></script><script src="/assets/js/58.82491500.js" defer></script>
+  </body>
+</html>

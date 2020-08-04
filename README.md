@@ -28,7 +28,7 @@ javascript 基础
 - 高阶函数
 - 箭头函数
 
-[传送门 JavaScript 函数](http://vuepress.lzwlook.fun/JavaScript/函数/01-定义函数的方式.html)
+[传送门 JavaScript 函数](http://vuepress.lzwlook.fun/JavaScript/%E5%87%BD%E6%95%B0/01-%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E5%BC%8F.html)
 
 ### JavaScript 运行机制
 

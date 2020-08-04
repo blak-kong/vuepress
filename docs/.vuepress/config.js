@@ -6,7 +6,7 @@ module.exports = {
   evergreen: true,
   themeConfig: {
     nav: [
-      { text: "Home", link: "/" },
+      { text: "Home", link: "/Home/目录.md" },
       {
         text: "javascript",
         items: [
@@ -23,7 +23,6 @@ module.exports = {
             link: "/JavaScript/函数式编程/01-函数式入门.md",
           },
           { text: "手写api", link: "/javascript/手写api/01-Promise.md" },
-          { text: "ES6+", link: "/javascript/ES6+/01-let 和 const.md" },
           { text: "构建工具", link: "/构建工具/01-Gulp.md" },
         ],
       },
@@ -34,11 +33,17 @@ module.exports = {
           { text: "gulp", link: "/404/404.md" },
         ],
       },
-      { text: "博客", link: "https://www.lzwlook.fun" },
+      {
+        text: "推荐博客",
+        items: [
+          {
+            text: "前端博客-冴羽",
+            link: "https://github.com/mqyqingfeng/Blog",
+          },
+        ],
+      },
+      { text: "blak-kong", link: "https://www.lzwlook.fun" },
     ],
-    // 添加侧边栏
-    // sidebar: ['/', '/javascript', '/算法','设计模式','构建工具'],
-    // sidebarDepth: 2,
   },
   plugins: {
     "vuepress-plugin-auto-sidebar": {}, // 自动生成
