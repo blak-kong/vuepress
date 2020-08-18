@@ -11,6 +11,10 @@ module.exports = {
         text: "javascript",
         items: [
           {
+            text: "JavaScript基础知识",
+            link: "/JavaScript/JavaScript基础知识/01-this.md",
+          },
+          {
             text: "JavaScript运行机制",
             link: "/JavaScript/JavaScript运行机制/01-javascript引擎.md",
           },
@@ -29,8 +33,7 @@ module.exports = {
       {
         text: "构建工具",
         items: [
-          { text: "webpack", link: "/404/404.md" },
-          { text: "gulp", link: "/404/404.md" },
+          { text: "webpack", link: "/构建工具/webpack4/01-如何学习webpack.md" },
         ],
       },
       {
