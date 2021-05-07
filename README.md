@@ -4,7 +4,7 @@
 
 Vuepress 生成文档，记录个人成长过程，梳理知识体系！👍
 
-[vuepress 在线地址](vuepress.lzwlook.fun)
+[vuepress 在线地址](http://vuepress.lzwlook.fun)
 
 <!-- 以下为已完成系列文章
 
