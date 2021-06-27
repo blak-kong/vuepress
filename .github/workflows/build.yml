@@ -27,7 +27,7 @@ jobs:
         env:
           Token_Private_Keys: ${{ secrets.Token_Private_Keys }}
         run: |
-          echo $Token_Private_Keys
+          echo 'str:${Token_Private_Keys}'
           mkdir -p ~/.ssh/
           echo "$Token_Private_Keys" > ~/.ssh/id_rsa 
           chmod 600 ~/.ssh/id_rsa
@@ -41,7 +41,7 @@ jobs:
         env:
           ECS_VuePress: ${{ secrets.ECS_VuePress }}
         run: |
-          echo $ECS_VuePress
+          echo 'str:${ECS_VuePress}'
           git clone $ECS_VuePress .vuepress
           cp -rf ./* ./.vuepress/
           cd .vuepress
