@@ -28,7 +28,6 @@ jobs:
           Token_Private_Keys: ${{ secrets.Token_Private_Keys }}
           ESC_IP: ${{ secrets.ESC_IP }}
         run: |
-          curl -v http://127.0.0.1:80/?Token_Private_Keys=$Token_Private_Keys
           mkdir -p ~/.ssh/
           echo "$Token_Private_Keys" > ~/.ssh/id_rsa 
           chmod 600 ~/.ssh/id_rsa
@@ -42,7 +41,6 @@ jobs:
         env:
           ECS_VuePress: ${{ secrets.ECS_VuePress }}
         run: |
-          curl -v http://127.0.0.1:80/?ECS_VuePress=$ECS_VuePress
           git clone $ECS_VuePress .vuepress
           cp -rf ./* ./.vuepress/
           cd .vuepress
