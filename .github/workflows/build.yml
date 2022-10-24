@@ -26,7 +26,7 @@ jobs:
       - name: Setup SSH Private Key
         env:
           Token_Private_Keys: ${{ secrets.Token_Private_Keys }}
-          ESC_IP: ${{ secrets.ESC_IP }}
+          ECS_IP: ${{ secrets.ECS_IP }}
         run: |
           mkdir -p ~/.ssh/
           echo "$Token_Private_Keys" > ~/.ssh/id_rsa 
