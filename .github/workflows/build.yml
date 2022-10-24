@@ -41,10 +41,10 @@ jobs:
         env:
           ECS_VuePress: ${{ secrets.ECS_VuePress }}
         run: |
-          git clone $ECS_VuePress .vuepress
-          cp -rf ./* ./.vuepress/
-          cd .vuepress
-          rm -rf ./.vuepress
+          # git clone $ECS_VuePress .vuepress
+          # cp -rf ./* ./.vuepress/
+          # cd .vuepress
+          # rm -rf ./.vuepress
           git add .
           git commit -F ../commit-message.log
           git push --force --quiet $ECS_VuePress master
