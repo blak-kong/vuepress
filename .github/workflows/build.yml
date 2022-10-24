@@ -31,7 +31,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$Token_Private_Keys" > ~/.ssh/id_rsa 
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan 173.82.246.121 >> ~/.ssh/known_hosts
+          ssh-keyscan $ECS_IP >> ~/.ssh/known_hosts
 
       - name: Get Latest Commit Message
         run: |
